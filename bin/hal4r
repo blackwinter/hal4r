@@ -1,0 +1,11 @@
+#! /usr/bin/env ruby
+
+require 'hal4r'
+
+abort "Usage: #{$0} <words...> [<window>]" if ARGV.empty? && $stdin.tty?
+
+window_size = ARGV.pop.to_i if ARGV.last =~ /\A\d+\z/
+
+terms = ARGV.empty? ? $stdin.readlines.flat_map(&:split).grep(/\w/) : ARGV
+
+puts Hal4R.new(terms, window_size)
