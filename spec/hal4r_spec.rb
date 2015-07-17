@@ -1,6 +1,8 @@
 describe Hal4R do
 
-  subject { described_class.new(%w[the horse raced past the barn fell .], 5) }
+  terms = %w[the horse raced past the barn fell .]
+
+  subject { described_class.new(terms, 5) }
 
   delta = Float::EPSILON
 
