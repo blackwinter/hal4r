@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Hal4R - hal4r Application documentation (v0.0.0)</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Enumerable</span>
+  
+  
+  </ul>
+</div>
+
+    <div id="extends-section" class="nav-section">
+  <h3>Extended With Modules</h3>
+
+  <ul class="link-list">
+    
+  
+    <li><span class="extend">Forwardable</span>
+  
+  
+  </ul>
+</div>
+
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-3C-3C">#&lt;&lt;</a>
+    
+    <li ><a href="#method-i-5B-5D">#[]</a>
+    
+    <li ><a href="#method-i-add">#add</a>
+    
+    <li ><a href="#method-i-cityblock">#cityblock</a>
+    
+    <li ><a href="#method-i-distance">#distance</a>
+    
+    <li ><a href="#method-i-each">#each</a>
+    
+    <li ><a href="#method-i-each_norm">#each_norm</a>
+    
+    <li ><a href="#method-i-each_vector">#each_vector</a>
+    
+    <li ><a href="#method-i-euclidean">#euclidean</a>
+    
+    <li ><a href="#method-i-inspect">#inspect</a>
+    
+    <li ><a href="#method-i-manhattan">#manhattan</a>
+    
+    <li ><a href="#method-i-minkowski">#minkowski</a>
+    
+    <li ><a href="#method-i-norm">#norm</a>
+    
+    <li ><a href="#method-i-reset">#reset</a>
+    
+    <li ><a href="#method-i-to_a">#to_a</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+    <li ><a href="#method-i-vector">#vector</a>
+    
+    <li ><a href="#method-i-vector_i">#vector_i</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Hal4R">
+  <h1 id="class-Hal4R" class="class">
+    class Hal4R
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="DEFAULT_WINDOW_SIZE">DEFAULT_WINDOW_SIZE
+        
+        <dd>
+        
+      
+        <dt id="VERSION">VERSION
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-window_size" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">window_size</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(terms = [], window_size = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">terms</span> = [], <span class="ruby-identifier">window_size</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">reset</span>(<span class="ruby-identifier">window_size</span>)
+  <span class="ruby-identifier">add</span>(<span class="ruby-identifier">terms</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-3C-3C" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">&lt;&lt;</span><span
+            class="method-args">(term)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="3C-3C-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">term</span>)
+  <span class="ruby-identifier">row</span> = <span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">term_index</span> = <span class="ruby-ivar">@idmap</span>[<span class="ruby-identifier">term</span>])
+
+  <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">each_with_index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">index</span>, <span class="ruby-identifier">weight</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">row</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">+=</span> <span class="ruby-identifier">weight</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span>
+  }.<span class="ruby-identifier">insert</span>(<span class="ruby-value">-1</span>, <span class="ruby-identifier">term_index</span>).<span class="ruby-identifier">shift</span>
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-5B-5D" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">[]</span><span
+            class="method-args">(term, norm = false)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Hal4R.html#method-i-vector">vector</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-add" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add</span><span
+            class="method-args">(terms)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add</span>(<span class="ruby-identifier">terms</span>)
+  <span class="ruby-identifier">terms</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">term</span><span class="ruby-operator">|</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">term</span> }
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cityblock" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">cityblock</span><span
+            class="method-args">(term1, term2, norm = true)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Hal4R.html#method-i-manhattan">manhattan</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-distance" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">distance</span><span
+            class="method-args">(term1, term2, dimension, norm = true)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Hal4R.html#method-i-minkowski">minkowski</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-each" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">each</span><span
+            class="method-args">(&block)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Hal4R.html#method-i-each_norm">each_norm</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-each_norm" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">each_norm</span><span
+            class="method-args">(&block)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="each_norm-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">each_norm</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">each_vector</span>(<span class="ruby-keyword">true</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Hal4R.html#method-i-each">each</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-each_vector" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">each_vector</span><span
+            class="method-args">(norm = false) { |vector_i(index, norm).to_a| ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="each_vector-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">each_vector</span>(<span class="ruby-identifier">norm</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span>(<span class="ruby-value">:each_vector</span>, <span class="ruby-identifier">norm</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-ivar">@idmap</span>.<span class="ruby-identifier">each_value</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">index</span><span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span> <span class="ruby-identifier">vector_i</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">norm</span>).<span class="ruby-identifier">to_a</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-euclidean" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">euclidean</span><span
+            class="method-args">(term1, term2, norm = true)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="euclidean-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">euclidean</span>(<span class="ruby-identifier">term1</span>, <span class="ruby-identifier">term2</span>, <span class="ruby-identifier">norm</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">minkowski</span>(<span class="ruby-identifier">term1</span>, <span class="ruby-identifier">term2</span>, <span class="ruby-value">2</span>, <span class="ruby-identifier">norm</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-inspect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">inspect</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="inspect-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inspect</span>
+  <span class="ruby-string">&#39;#&lt;%s:0x%x @window_size=%p, @size=%p&gt;&#39;</span> <span class="ruby-operator">%</span> [
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">object_id</span>, <span class="ruby-identifier">window_size</span>, <span class="ruby-identifier">size</span>
+  ]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-manhattan" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">manhattan</span><span
+            class="method-args">(term1, term2, norm = true)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="manhattan-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">manhattan</span>(<span class="ruby-identifier">term1</span>, <span class="ruby-identifier">term2</span>, <span class="ruby-identifier">norm</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">minkowski</span>(<span class="ruby-identifier">term1</span>, <span class="ruby-identifier">term2</span>, <span class="ruby-value">1</span>, <span class="ruby-identifier">norm</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Hal4R.html#method-i-cityblock">cityblock</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-minkowski" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">minkowski</span><span
+            class="method-args">(term1, term2, dimension, norm = true)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="minkowski-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">minkowski</span>(<span class="ruby-identifier">term1</span>, <span class="ruby-identifier">term2</span>, <span class="ruby-identifier">dimension</span>, <span class="ruby-identifier">norm</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">sum</span> = <span class="ruby-value">0</span>
+
+  <span class="ruby-identifier">vector</span>(<span class="ruby-identifier">term1</span>, <span class="ruby-identifier">norm</span>).<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">vector</span>(<span class="ruby-identifier">term2</span>, <span class="ruby-identifier">norm</span>)) { <span class="ruby-operator">|</span><span class="ruby-identifier">value1</span>, <span class="ruby-identifier">value2</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> (<span class="ruby-identifier">value1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">value2</span>).<span class="ruby-identifier">abs</span> <span class="ruby-operator">**</span> <span class="ruby-identifier">dimension</span>
+  }
+
+  <span class="ruby-identifier">sum</span> <span class="ruby-operator">**</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">fdiv</span>(<span class="ruby-identifier">dimension</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Hal4R.html#method-i-distance">distance</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-norm" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">norm</span><span
+            class="method-args">(term)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="norm-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">norm</span>(<span class="ruby-identifier">term</span>)
+  <span class="ruby-identifier">vector</span>(<span class="ruby-identifier">term</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-reset" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reset</span><span
+            class="method-args">(window_size = window_size())</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="reset-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reset</span>(<span class="ruby-identifier">window_size</span> = <span class="ruby-identifier">window_size</span>())
+  <span class="ruby-ivar">@idmap</span>, <span class="ruby-ivar">@matrix</span>, <span class="ruby-ivar">@window</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">idmap</span>(<span class="ruby-value">-1</span>), <span class="ruby-constant">Matrix</span>.<span class="ruby-identifier">new</span>,
+    <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@window_size</span> = <span class="ruby-identifier">window_size</span> <span class="ruby-operator">||</span> <span class="ruby-constant">DEFAULT_WINDOW_SIZE</span>)
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_a" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_a</span><span
+            class="method-args">(norm = true)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="to_a-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_a</span>(<span class="ruby-identifier">norm</span> = <span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">norm</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">each_norm</span>.<span class="ruby-identifier">to_a</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">each_vector</span>.<span class="ruby-identifier">to_a</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">cols</span> = [<span class="ruby-identifier">terms</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-keyword">nil</span>)]
+
+  <span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">each_col</span>.<span class="ruby-identifier">with_index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">col</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">cols</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-ivar">@idmap</span>.<span class="ruby-identifier">key</span>(<span class="ruby-identifier">index</span>), <span class="ruby-operator">*</span><span class="ruby-identifier">col</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">col</span>.<span class="ruby-identifier">isnull?</span> }
+
+  <span class="ruby-identifier">fmt</span> = <span class="ruby-identifier">cols</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">col</span><span class="ruby-operator">|</span>
+    <span class="ruby-node">&quot;%#{col.map { |val| val.to_s.length }.max}s&quot;</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39; &#39;</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">$/</span>
+
+  <span class="ruby-identifier">cols</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">each_index</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">fmt</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">cols</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">col</span><span class="ruby-operator">|</span> <span class="ruby-identifier">col</span>[<span class="ruby-identifier">index</span>] } }.<span class="ruby-identifier">join</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-vector" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">vector</span><span
+            class="method-args">(term, norm = false)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="vector-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">vector</span>(<span class="ruby-identifier">term</span>, <span class="ruby-identifier">norm</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">vector_i</span>(<span class="ruby-ivar">@idmap</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">term</span>), <span class="ruby-identifier">norm</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Hal4R.html#method-i-5B-5D">[]</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Private Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-vector_i" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">vector_i</span><span
+            class="method-args">(index, norm)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="vector_i-source">
+            <pre><span class="ruby-comment"># File lib/hal4r.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">vector_i</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">norm</span>)
+  <span class="ruby-ivar">@matrix</span>.<span class="ruby-identifier">vector</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">size</span>, <span class="ruby-identifier">norm</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
