@@ -37,7 +37,7 @@ class Hal4R
 
   def_delegator :@idmap, :keys, :terms
 
-  def_delegators :@idmap, :size
+  def_delegators :@idmap, :size, :empty?
 
   def initialize(terms = [], window_size = nil)
     reset(window_size)
@@ -90,13 +90,8 @@ class Hal4R
   alias_method :each, :each_norm
 
   def minkowski(term1, term2, dimension, norm = true)
-    sum = 0
-
-    vector(term1, norm).zip(vector(term2, norm)) { |value1, value2|
-      sum += (value1 - value2).abs ** dimension
-    }
-
-    sum ** 1.fdiv(dimension)
+    [term1, term2].map { |term| vector(term, norm).vector }
+      .inject(:-).abs.to_f.pow(dimension).sum ** 1.fdiv(dimension)
   end
 
   alias_method :distance, :minkowski
