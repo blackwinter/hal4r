@@ -39,4 +39,52 @@ raced   4     5     0    0    0    0
     expect(subject.manhattan('horse', 'barn')).to be_within(delta).of(3.2255132606573502)
   end
 
+  ary = [
+    ['horse', 'the',   Float],
+    ['raced', 'the',   Float],
+    ['past',  'the',   Float],
+    ['barn',  'the',   Float],
+    ['fell',  'the',   Float],
+    ['.',     'the',   Float],
+    ['horse', 'raced', Float],
+    ['horse', 'past',  Float],
+    ['barn',  'horse', Float],
+    ['fell',  'horse', Float],
+    ['.',     'horse', Float],
+    ['past',  'raced', Float],
+    ['barn',  'raced', Float],
+    ['fell',  'raced', Float],
+    ['.',     'raced', Float],
+    ['barn',  'past',  Float],
+    ['fell',  'past',  Float],
+    ['.',     'past',  Float],
+    ['barn',  'fell',  Float],
+    ['.',     'barn',  Float],
+    ['.',     'fell',  Float]
+  ]
+
+  example do
+    expect(subject.each_distance.to_a).to match(ary)
+  end
+
+  example do
+    expect{|b|subject.each_distance(&b)}.to yield_successive_args(*ary)
+  end
+
+  example do
+    expect(subject.each_distance(false).to_a).to match(ary)
+  end
+
+  example do
+    expect{|b|subject.each_distance(false, &b)}.to yield_successive_args(*ary)
+  end
+
+  example do
+    expect(subject.each_distance(true, 1).to_a).to match(ary)
+  end
+
+  example do
+    expect{|b|subject.each_distance(true, 1, &b)}.to yield_successive_args(*ary)
+  end
+
 end
