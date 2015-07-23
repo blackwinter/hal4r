@@ -65,6 +65,14 @@ one
     end
 
     example do
+      expect(subject.related('one')).to eq([])
+    end
+
+    example do
+      expect{subject.related('foo')}.to raise_error(KeyError)
+    end
+
+    example do
       expect(subject.each_distance.to_a).to eq([])
     end
 
@@ -106,6 +114,14 @@ two  10
 
     example do
       expect{subject.manhattan('one', 'foo')}.to raise_error(KeyError)
+    end
+
+    example do
+      expect(subject.related('one')).to eq(%w[two])
+    end
+
+    example do
+      expect{subject.related('foo')}.to raise_error(KeyError)
     end
 
     ary1 = [[*terms, Math.sqrt(2)]]
@@ -195,6 +211,22 @@ raced   4     5     0    0    0    0
 
     example do
       expect{subject.euclidean('foo', 'barn')}.to raise_error(KeyError)
+    end
+
+    example do
+      expect(subject.related('horse')).to eq(%w[raced the past barn fell])
+    end
+
+    example do
+      expect(subject.related('horse', 2)).to eq(%w[raced the])
+    end
+
+    example do
+      expect(subject.related('horse', 3, 1)).to eq(%w[raced past the])
+    end
+
+    example do
+      expect{subject.related('foo')}.to raise_error(KeyError)
     end
 
     ary = [

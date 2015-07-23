@@ -100,6 +100,10 @@ class Hal4R
     self
   end
 
+  def related(term, num = window_size, dimension = 2)
+    (terms - [term]).sort_by { |t| minkowski(term, t, dimension) }[0, num]
+  end
+
   def minkowski(term1, term2, dimension, norm = true)
     [term1, term2].map { |term| vector(term, norm).vector }
       .inject(:-).abs.to_f.pow(dimension).sum ** 1.fdiv(dimension)
