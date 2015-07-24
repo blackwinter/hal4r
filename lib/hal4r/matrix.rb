@@ -45,14 +45,14 @@ class Hal4R
 
     attr_accessor :step
 
-    def get(index)
-      expand unless index < size
-      @matrix.row(index)
+    def get(key)
+      expand unless key < size
+      @matrix.row(key)
     end
 
-    def vector(index, size = size(), norm = false)
-      vector = @matrix.subrow(index, 0, size)
-        .concat(@matrix.subcolumn(index, 0, size))
+    def vector(key, size = size(), norm = false)
+      vector = @matrix.subrow(key, 0, size)
+        .concat(@matrix.subcolumn(key, 0, size))
 
       Vector.new(norm ? vector.to_f.normalize : vector)
     end

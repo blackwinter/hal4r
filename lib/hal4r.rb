@@ -54,11 +54,11 @@ class Hal4R
   end
 
   def <<(term)
-    row = @matrix.get(term_index = @idmap[term])
+    row = @matrix.get(term_key = @idmap[term])
 
-    @window.each_with_index { |index, weight|
-      row[index] += weight + 1 if index
-    }.insert(-1, term_index).shift
+    @window.each_with_index { |key, index|
+      row[key] += index + 1 if key
+    }.insert(-1, term_key).shift
 
     self
   end
@@ -81,7 +81,7 @@ class Hal4R
   def each_vector(norm = false)
     return enum_for(:each_vector, norm) unless block_given?
 
-    @idmap.each_value { |index| yield vector_i(index, norm).to_a }
+    @idmap.each_value { |key| yield vector_i(key, norm).to_a }
 
     self
   end
@@ -127,14 +127,14 @@ class Hal4R
   def to_s
     cols = [terms.unshift(nil)]
 
-    @matrix.each_col.with_index { |col, index|
-      cols << [@idmap.key(index), *col] unless col.isnull? }
+    @matrix.each_col.with_index { |col, key|
+      cols << [@idmap.key(key), *col] unless col.isnull? }
 
     fmt = cols.map { |col|
       "%#{col.map { |val| val.to_s.length }.max}s" }.join(' ') << $/
 
-    cols.first.each_index.map { |index|
-      fmt % cols.map { |col| col[index] } }.join
+    cols.first.each_index.map { |key|
+      fmt % cols.map { |col| col[key] } }.join
   end
 
   def inspect
@@ -145,8 +145,8 @@ class Hal4R
 
   private
 
-  def vector_i(index, norm)
-    @matrix.vector(index, size, norm)
+  def vector_i(key, norm)
+    @matrix.vector(key, size, norm)
   end
 
 end
