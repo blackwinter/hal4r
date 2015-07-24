@@ -40,6 +40,10 @@ class Hal4R
       block ? vector.each(&block) : enum_for(:each)
     end
 
+    def minkowski(other, dimension = 2)
+      (vector - other.vector).abs.to_f.pow(dimension).sum ** 1.fdiv(dimension)
+    end
+
     def inspect
       '#<%s:0x%x @vector=%p>' % [
         self.class, object_id, vector

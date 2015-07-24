@@ -101,12 +101,11 @@ class Hal4R
   end
 
   def related(term, num = window_size, dimension = 2)
-    (terms - [term]).sort_by { |t| minkowski(term, t, dimension) }[0, num]
+    (terms - [term]).sort_by { |t| minkowski(term, t, dimension) }.first(num)
   end
 
   def minkowski(term1, term2, dimension, norm = true)
-    [term1, term2].map { |term| vector(term, norm).vector }
-      .inject(:-).abs.to_f.pow(dimension).sum ** 1.fdiv(dimension)
+    vector(term1, norm).minkowski(vector(term2, norm), dimension)
   end
 
   alias_method :distance, :minkowski
