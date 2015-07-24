@@ -50,14 +50,21 @@ class Hal4R
     @idmap, @matrix, @window = Hash.idmap(-1), Matrix.new,
       Array.new(@window_size = window_size || DEFAULT_WINDOW_SIZE)
 
+    #@geometric_factor = @window_size * 2 ** -@window_size
+
     self
   end
 
   def <<(term)
     row = @matrix.get(term_key = @idmap[term])
 
+    # NOTE: only records "before" window,
+    # "after" window is redundant (falls
+    # out of the matrix automatically),
+    # *unless* asymmetric weighting is
+    # desired -- is it worth the trouble?
     @window.each_with_index { |key, index|
-      row[key] += index + 1 if key
+      row[key] += weight(index + 1) if key
     }.insert(-1, term_key).shift
 
     self
@@ -144,6 +151,21 @@ class Hal4R
   end
 
   private
+
+  def even_weight(window_position)
+    1
+  end
+
+  # requires GSL::Matrix instead of GSL::Matrix::Int
+  #def geometric_weight(window_position)
+  #  @geometric_factor * 2 ** window_position
+  #end
+
+  def linear_weight(window_position)
+    window_position
+  end
+
+  alias_method :weight, :linear_weight
 
   def vector_i(key, norm)
     @matrix.vector(key, size, norm)
