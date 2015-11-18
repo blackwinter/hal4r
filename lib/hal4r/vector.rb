@@ -37,7 +37,7 @@ class Hal4R
     attr_reader :vector
 
     def each(&block)
-      block ? vector.each(&block) : enum_for(:each)
+      block ? vector.each(&block) : enum_for(__method__)
     end
 
     def minkowski(other, dimension = 2)

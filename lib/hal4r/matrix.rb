@@ -58,7 +58,7 @@ class Hal4R
     end
 
     def each_col(&block)
-      block ? @matrix.each_col(&block) : enum_for(:each_col)
+      block ? @matrix.each_col(&block) : enum_for(__method__)
     end
 
     def inspect

@@ -86,7 +86,7 @@ class Hal4R
   end
 
   def each_vector(norm = false)
-    return enum_for(:each_vector, norm) unless block_given?
+    return enum_for(__method__, norm) unless block_given?
 
     @idmap.each_value { |key| yield vector_i(key, norm).to_a }
 
@@ -100,7 +100,7 @@ class Hal4R
   alias_method :each, :each_norm
 
   def each_distance(norm = true, dimension = 2)
-    return enum_for(:each_distance, norm, dimension) unless block_given?
+    return enum_for(__method__, norm, dimension) unless block_given?
 
     terms.combination(2) { |t| yield *t.sort!, minkowski(*t, dimension, norm) }
 
